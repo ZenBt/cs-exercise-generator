@@ -8,17 +8,21 @@ from apps.cs_gen.services.exercise_generators.path_task import PathExerciseTaskG
 
 class ExerciseTypeFactory:
     
-    def __init__(self, selected_type: SupportedExerciseType) -> None:
+    def __init__(self, selected_type: SupportedExerciseType, amount: int) -> None:
         self._type = selected_type
+        self._amount = amount
     
     
     def create_exercise_generator(self) -> AbstractExerciseGenerator:
-        pass
+        exercise_gen_class = self._get_exercise_gen_class()
+        exercise_gen = exercise_gen_class(self._amount)
+
+        return exercise_gen
     
 
     def _get_exercise_gen_class(self):
         
-        match self._value:
+        match self._type:
             
             case SupportedExerciseType.ENCODING_TASK:
                 return EncodingExerciseTaskGenerator
@@ -27,4 +31,4 @@ class ExerciseTypeFactory:
                 return PathExerciseTaskGenerator
             
             case _:
-                raise UnsupportedTypeError(self._value)
+                raise UnsupportedTypeError(self._type)

@@ -192,8 +192,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # SPECTACULAR (API SCHEME)
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Webtronics API',
-    'DESCRIPTION': 'Api for Webtronics application',
+    'TITLE': 'CS exercise generator API',
+    'DESCRIPTION': 'Api for CS exercise generator application',
     'VERSION': '1.0.0',
 }
 
