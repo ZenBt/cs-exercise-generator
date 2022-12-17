@@ -51,6 +51,7 @@
             "phrase": "— фрукты"
         }
     ],
+
     "SymbolAmount": [
         "Слух обо мне пройдёт по всей Руси великой.",
         "Семь раз отмерь, один раз отрежь",
@@ -64,5 +65,57 @@
         "Одно дерево еще не лес.",
         "Пчела хоть и жалит, да мед дает."
 
+    ],
+
+    "Protocol": [
+        "http",
+        "https",
+        "ftp",
+        "ftps",
+        "sftp",
+        "ssh",
+        "smtp"
+    ],
+
+    "DomainName": [
+        "site",
+        "market",
+        "shop",
+        "store",
+        "domain",
+        "host"
+    ],
+
+    "DomainZone": [
+        ".ru",
+        ".com",
+        ".net",
+        ".org",
+        ".рф",
+        ".su"
+    ],
+
+    "FileName": [
+        "cat",
+        "dog",
+        "book",
+        "car",
+        "pic",
+        "photo"
+    ],
+
+    "FileExtension": [
+        ".jpg",
+        ".png",
+        ".gif",
+        ".bmp",
+        ".jpeg",
+        ".tiff",
+        ".doc",
+        ".docx",
+        ".htm",
+        ".html",
+        ".pdf",
+        ".xml"
     ]
 }
