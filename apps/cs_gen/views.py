@@ -1,7 +1,7 @@
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from drf_spectacular.utils import extend_schema
-
+import djoser
 from apps.cs_gen.serializers import ExerciseSerializer, OutputExerciseSerializer
 from apps.cs_gen.services.exercise_factory import ExerciseTypeFactory
 

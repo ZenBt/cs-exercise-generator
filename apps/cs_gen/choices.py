@@ -4,6 +4,8 @@ from django.db.models import IntegerChoices
 class SupportedExerciseType(IntegerChoices):
     ENCODING_TASK = (0, "Задача на кодировку")
     PATH_TASK = (1, "Задача на построение абсолютного пути")
+    FILE_STORAGE_TASK = (2, "Задача на хранение информации")
+    FILE_TRANSFER_TASK = (3, "Задача на передачу информации")
 
 
 class SupportedEncoding(IntegerChoices):
