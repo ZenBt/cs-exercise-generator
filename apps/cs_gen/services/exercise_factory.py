@@ -4,6 +4,9 @@ from apps.cs_gen.services.exceptions import UnsupportedTypeError
 from apps.cs_gen.services.exercise_generators.base_generator import AbstractExerciseGenerator
 from apps.cs_gen.services.exercise_generators.encoding_task import EncodingExerciseTaskGenerator
 from apps.cs_gen.services.exercise_generators.path_task import PathExerciseTaskGenerator
+from apps.cs_gen.services.exercise_generators.info_tasks import (
+    FileStorageExerciseTaskGenerator, FileTransferTaskGenerator
+)
 
 
 class ExerciseTypeFactory:
@@ -29,6 +32,12 @@ class ExerciseTypeFactory:
             
             case SupportedExerciseType.PATH_TASK:
                 return PathExerciseTaskGenerator
+            
+            case SupportedExerciseType.FILE_STORAGE_TASK:
+                return FileStorageExerciseTaskGenerator
+            
+            case SupportedExerciseType.FILE_TRANSFER_TASK:
+                return FileTransferTaskGenerator
             
             case _:
                 raise UnsupportedTypeError(self._type)

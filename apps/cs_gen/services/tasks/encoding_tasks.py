@@ -75,9 +75,7 @@ class TextValueExercise(AbstractTask):
         return self._answer or self._calculate_answer()
     
     def _calculate_answer(self) -> int:
-        overall_strings = self._page_amount * self._string_amount
-        overall_symbols = overall_strings * self._symbol_amount
-        self._answer = overall_symbols * self._encoding['bits']
+        overall_strings = self._pbols * self._encoding['bits']
         
         return self._to_kbytes(self._answer)
     
